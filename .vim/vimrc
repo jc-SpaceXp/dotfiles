@@ -5,10 +5,10 @@
 set nocp
 
 set ffs=unix,dos,mac           "use unix as the standard file type
-
+set title
 " Enable filetype plugins
 "filetype plugin on
-"filetype indent on
+filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -24,13 +24,39 @@ set showcmd                    "Displays commands being typed
 
 set lines=50 columns=100       "sets intial size of vim window
 
+"set whichwrap+=<,>,h,l,[,]     "let cursor wrap to lines above/below
+
+" toggle invisible characters
+set list
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
+"→\ alt for Tab Char
+
+
+" scroll the viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+
 """"""""""""""""""""""""""""""""
 " Colours & Fonts
 """"""""""""""""""""""""""""""""
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
 syntax on                      "syntax enable is the same thing
 
-colorscheme badwolf
+colorscheme candy
 set background=dark
+
+"Lightline Status Bar Tweaks
+let g:lightline = {
+      \ 'colorscheme': 'Dracula',
+      \ }
+set noshowmode
+
 
 set number                     "show line numb
 set numberwidth=1              "sets how far numbers appear from lhs of screen
@@ -40,6 +66,22 @@ set numberwidth=1              "sets how far numbers appear from lhs of screen
 set hls                        "highlight search
 set incsearch                  "highlight search whilst typing
 
+
+""""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""""
+" Specify a directory for plugins
+" Make sure you use single quotes
+call plug#begin('~/.vim/plugged')
+
+
+" LighLine Status Bar Plugin
+ Plug 'itchyny/lightline.vim'
+
+
+" Initialize plugin system
+call plug#end()
+
 """""""""""""""""""""""""""""""
 " Text, tabs and indent related stuff
 """""""""""""""""""""""""""""""
@@ -47,3 +89,21 @@ set incsearch                  "highlight search whilst typing
 " 1 tab == 4 sapces
 set shiftwidth=4               "same as sw=4
 set tabstop=4                  "same as ts=4
+
+
+""""""""""""""""""""""""""""""""
+" Abbreviations (autocorrect)
+""""""""""""""""""""""""""""""""
+abbr cosnt const
+
+
+""""""""""""""""""""""""""""""
+" Hard Mode
+""""""""""""""""""""""""""""""
+" Disable Arrow keys & page-up & page-down in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+imap <PageUp> <nop>
+imap <PageDown> <nop>
