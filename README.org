@@ -29,8 +29,9 @@
     [[file:screens/tmux.png]]
 
 *** Emacs
+    [[file:screens/emacs.png]]
 
 *** Vim
 
 *** ncmpcpp
-    [[file:screens/ncmcpp.png]]
+    [[file:screens/ncmpcpp.png]]
