@@ -1,0 +1,32 @@
+# Files
+mpd_music_dir = "~/Music"
+mpd_connection_timeout = "5"
+ncmpcpp_directory = "~/.ncmpcpp"
+
+mpd_host = "localhost"
+mpd_port = "6601"
+
+#progressbar_look = "▃▃▃"
+progressbar_elapsed_color = "green"  # cyan is also nice
+playlist_display_mode = "classic"
+song_list_format = "{%n}|{  }  {$4%a - %t}|{%t}|{%f}    $R{(%y) %b}  $R$9$3[%l]$9" 
+#now_playing_prefix = "> "
+media_library_albums_split_by_date = yes
+ask_before_clearing_playlists = yes
+
+[browser]
+browser_display_mode = "classic"
+
+[statusbar]
+statusbar_visibility = "yes"
+statusbar_color = "green"
+display_bitrate = "yes"
+song_status_format = "{#%N} {%a - %t}|{%t}|{%f}"
+
+[visualiser]
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "15" 
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "▋▋"

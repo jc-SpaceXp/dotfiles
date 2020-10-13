@@ -10,7 +10,7 @@ set ruler                      "always show current position
 set laststatus=2               "always show the status line
 set lazyredraw                 "don't redraw while executing macros (good performance config)
 set showcmd                    "displays commands being typed 
-set lines=50 columns=100       "sets intial size of vim window
+"set lines=50 columns=100       "sets intial size of vim window
 set number                     "show line numb
 set numberwidth=1              "sets how far numbers appear from lhs of screen
 set hls                        "highlight search
@@ -40,14 +40,14 @@ set nowrap
 " Colours & Fonts
 """"""""""""""""""""""""""""""""
 
-"True Color Support
-"if (has("termguicolors"))
- " set termguicolors
-"endif
+set termguicolors " Enable true color support.
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " 256 Color Support
 if !has('gui_running')
   set t_Co=256
+  set termguicolors  "new
 endif
 
 
@@ -91,6 +91,9 @@ Plug 'drewtempelmeyer/palenight.vim'
 " Arduino Syntax - Vim-Polyglot 
 Plug 'sudar/vim-arduino-syntax'
 
+"ASM Syntax
+"Plug 'https://github.com/Shirk/vim-gas.git'
+
 "C/C++ Syntax
 Plug 'octol/vim-cpp-enhanced-highlight'
 
@@ -118,6 +121,9 @@ filetype on
 filetype plugin on
 filetype indent on
 set wildignore=*.o,*.hi,*.pyc,*.pdf " ignore complied files etc.
+
+"au BufRead,BufNewFile *.S set filetype=asmx86
+"au BufRead,BufNewFile *.asm set filetype=asmx86
 
 
 """"""""""""""""""""""""""""""""
