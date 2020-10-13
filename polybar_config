@@ -1,0 +1,116 @@
+;;;;;;;;;;;;;;;;;;;;
+; Bottom bars
+;;;;;;;;;;;;;;;;;;;;
+[bar/bottom1]
+background = #ffffff
+foreground = #000000
+
+height = 60
+width = 18%
+offset-x = 2%
+offset-y = 20
+
+bottom = true
+fixed-center = true
+
+;default font is DejaVu Sans == Bitsream Vera Sans (on Antergos18.1)
+font-0 = DejaVu Sans:size=14;3
+font-1 = Font Awesome:size=20;5
+
+modules-center = date
+module-margin = 2
+
+tray-position = none
+override-redirect = true
+
+padding = 10
+radius = 8.0
+wm-name = bar
+
+
+[bar/bottom2]
+inherit = bar/bottom1
+modules-center = backlight volume wlan battery
+height = 60
+width = 28%
+offset-x = 70%
+
+
+[module/date]
+type = internal/date
+interval = 60
+date = %a %d %b
+time = %l:%M %p
+label =   %date%     %time%
+
+
+[module/backlight]
+type = internal/xbacklight
+label =   %percentage%%
+
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+poll-interval = 0
+full-at = 98
+
+format-discharging = <ramp-capacity>  <label-discharging> 
+format-full = <ramp-capacity>  <label-full>
+format-charging = <animation-charging>  <label-charging>
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 5
+label-connected = %{A1:nm-connection-editor:} %essid%%{A}
+
+
+[module/volume]
+type = internal/pulseaudio
+; sink listed in pacmd list-sinks
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = true
+interval = 5
+
+format-volume = <ramp-volume>  <label-volume>
+format-muted =   0%
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Openbox Workspaces ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+;[module/workspaces]
+;type = internal/xworkspaces
+;pin-workspaces = false
+;enable-click = true
+;enable-scroll = true
+;format-padding = 0
+;icon-0 = 1;
+;icon-1 = 2;
+;icon-2 = 3;
+;icon-3 = 4;
+;icon-4 = 5;
+;icon-5 = 6;
+;icon-6 = 7;
+;icon-7 = 8;
+;icon-8 = 9;
+;icon-9 = 10;
+;icon-default =
+;format = <label-state>

@@ -1,0 +1,36 @@
+* Dotfiles
+** Available Configs
+   - emacs (and folder)
+   - vim
+   - tmux
+   - bashrc
+   - mpd
+   - ncmpcpp
+   - polybar
+
+** Locations of Configs
+*** mpd
+    ~/.mpd/
+*** ncmpcpp
+    ~/.ncmpcpp/
+*** polybar
+    ~/.config/polybar/
+*** vim
+    ~/.vim/
+*** tmux
+    ~/
+*** emcas config
+    ~/
+*** emcas directory
+    ~/.emacs.d/
+
+** Screenshots
+*** Tmux
+    [[file:screens/tmux.png]]
+
+*** Emacs
+
+*** Vim
+
+*** ncmpcpp
+    [[file:screens/ncmcpp.png]]
