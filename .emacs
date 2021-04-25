@@ -27,6 +27,8 @@
   :ensure t
   :config
   (define-key org-mode-map (kbd "C-c a") 'org-agenda)
+  ;; Show overview when open
+  (setq org-startup-folded t)
 )
 
 ;; Load helm fuzzy-file-finder
@@ -95,7 +97,8 @@
  '(custom-safe-themes
    '("37046960cf667c5ab3b76235d35a5db4763c531e706502a9067fa78db5a775c0" default))
  '(org-agenda-files '("~/Documents/org_files/test/test.org"))
- '(package-selected-packages '(use-package undo-tree goto-chg)))
+ '(package-selected-packages '(use-package undo-tree goto-chg))
+ '(safe-local-variable-values '((linum-mode) (column-number-mode) (line-number-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
