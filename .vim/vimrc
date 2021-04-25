@@ -56,8 +56,9 @@ syntax on                      "syntax enable is the same thing
 set background=dark
 colorscheme onedark
 
+" dracula now comes from dracula plugin not lightline
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
+      \ 'colorscheme': 'dracula',
       \ }
 set noshowmode
 
@@ -87,6 +88,9 @@ Plug 'drewtempelmeyer/palenight.vim'
 
 " Base16 - Colorschemes
 "Plug 'chriskempson/base16-vim'
+
+" Dracula colourscheme
+Plug 'https://github.com/dracula/vim.git', { 'dir' : '~/.vim/plugged/dracula' }
 
 " Arduino Syntax - Vim-Polyglot 
 Plug 'sudar/vim-arduino-syntax'
