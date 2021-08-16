@@ -16,6 +16,7 @@ ask_before_clearing_playlists = yes
 
 [browser]
 browser_display_mode = "classic"
+browser_sort_mode = name
 
 [statusbar]
 statusbar_visibility = "yes"
