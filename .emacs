@@ -20,15 +20,17 @@
   :ensure t
   :config
     (evil-mode 1)
+    (evil-define-key 'normal org-mode-map (kbd "<tab>") #'org-cycle) ;; Keep TAB to org-cycle, to cycle through headers and lists
 )
 
 ;; Load org-mode
 (use-package org
   :ensure t
   :config
-  (define-key org-mode-map (kbd "C-c a") 'org-agenda)
-  ;; Show overview when open
-  (setq org-startup-folded t)
+    (define-key org-mode-map (kbd "C-c a") 'org-agenda)
+    ;; Show overview when open
+    (setq org-startup-folded t)
+    (setq org-adapt-indentation t)
 )
 
 ;; Load helm fuzzy-file-finder
