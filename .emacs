@@ -14,6 +14,15 @@
   (package-install 'use-package))
 (require 'use-package)
 
+;; Load undo-tree
+(use-package undo-tree
+  :ensure t
+  :after evil
+  :diminish
+  :config
+    (evil-set-undo-system 'undo-tree)
+    (global-undo-tree-mode 1)
+)
 
 ;; Load EVIL-mode
 (use-package evil
