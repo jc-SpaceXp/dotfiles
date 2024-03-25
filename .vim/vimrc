@@ -94,7 +94,7 @@ syntax on                      "syntax enable is the same thing
 set background=dark
 colorscheme onedark
 
-" dracula now comes from dracula plugin not lightline
+" dracula plugin has a lightline theme included
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ }
