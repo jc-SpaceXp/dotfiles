@@ -55,7 +55,6 @@ set ruler                      "always show current position
 set laststatus=2               "always show the status line
 set lazyredraw                 "don't redraw while executing macros (good performance config)
 set showcmd                    "displays commands being typed
-"set lines=50 columns=100       "sets intial size of vim window
 set number                     "show line numb
 set numberwidth=1              "sets how far numbers appear from lhs of screen
 set hls                        "highlight search
@@ -63,8 +62,6 @@ set incsearch                  "highlight search whilst typing
 set ignorecase                 "case insensitive search
 set smartcase                  "case sensitive if search term contains capitals
 set whichwrap+=<,>,h,l,[,]     "let cursor wrap to lines above/below
-
-
 
 " toggle invisible characters
 set list
@@ -85,7 +82,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " 256 Color Support
 if !has('gui_running')
   set t_Co=256
-  set termguicolors  "new
+  set termguicolors
 endif
 
 
