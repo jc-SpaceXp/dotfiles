@@ -101,10 +101,6 @@ Plug 'sudar/vim-arduino-syntax'
 "C/C++ Syntax
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-" NerdTree (File-Explorer)
-Plug 'scrooloose/nerdtree/'
-
-
 
 
 " Initialize plugin system
@@ -149,9 +145,6 @@ nnoremap <C-y> 3<C-y>
 
 " C Initial File Macro (Main function macro + include std i/o)
 map <Leader>cdef i/*<CR> PROGRAMM COMMENT<CR><CR>/<CR><CR>#include <stdio.h><CR><CR>int main(int argc, char **argv)<CR>{<CR>return 0;<CR>}<ESC>
-
-" Nerd Tree Key Mapping
-map <C-n> :NERDTreeToggle<CR>
 
 " Hard Mode
 " Disable Arrow keys & page-up & page-down in Insert mode
