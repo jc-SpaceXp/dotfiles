@@ -36,6 +36,9 @@ Plug 'sudar/vim-arduino-syntax'
 "C/C++ Syntax
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+"Highlight excess whitespace
+Plug 'ntpeters/vim-better-whitespace'
+
 
 " Initialize plugin system
 call plug#end()
