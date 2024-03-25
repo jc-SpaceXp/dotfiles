@@ -9,7 +9,7 @@ set title                      "show title on terminal
 set ruler                      "always show current position
 set laststatus=2               "always show the status line
 set lazyredraw                 "don't redraw while executing macros (good performance config)
-set showcmd                    "displays commands being typed 
+set showcmd                    "displays commands being typed
 "set lines=50 columns=100       "sets intial size of vim window
 set number                     "show line numb
 set numberwidth=1              "sets how far numbers appear from lhs of screen
@@ -30,9 +30,9 @@ set nowrap
 
 " Cursor Change - DOESN'T WORK - DOESN'T RESET VALUE
 "if has("autocmd")
- " au InsertEnter * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_BLOCK/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"                                                                                          
-  "au InsertLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_UNDERLINE/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"                                                                                          
-  "au VimLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_UNDERLINE/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"  
+ " au InsertEnter * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_BLOCK/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"
+  "au InsertLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_UNDERLINE/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"
+  "au VimLeave * silent execute "!sed -i.bak -e 's/TERMINAL_CURSOR_SHAPE_UNDERLINE/TERMINAL_CURSOR_SHAPE_BLOCK/' ~/.config/xfce4/terminal/terminalrc"
 "endif
 
 
@@ -92,7 +92,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 " Dracula colourscheme
 Plug 'https://github.com/dracula/vim.git', { 'dir' : '~/.vim/plugged/dracula' }
 
-" Arduino Syntax - Vim-Polyglot 
+" Arduino Syntax - Vim-Polyglot
 Plug 'sudar/vim-arduino-syntax'
 
 "ASM Syntax
