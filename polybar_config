@@ -20,7 +20,6 @@ font-1 = Font Awesome:size=20;5
 modules-center = date
 module-margin = 2
 
-tray-position = none
 override-redirect = true
 
 padding = 10
