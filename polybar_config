@@ -76,7 +76,7 @@ type = internal/network
 interface = wlp3s0
 interval = 5
 label-connected = %{A1:nm-connection-editor:} %essid%%{A}
-label-disconnected = %{A1:nm-connection-editor:} DISCONNECTED
+label-disconnected = %{A1:nm-connection-editor:} DISCONNECTED%{A}
 
 [module/volume]
 type = internal/pulseaudio
