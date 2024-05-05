@@ -11,9 +11,6 @@ PS1='[\u@\h \W]\$ '
 if [ -e ~/.bashrc.aliases ] ; then
    source ~/.bashrc.aliases
 fi
-# >>> Added by cnchi installer
-#BROWSER=/usr/bin/chromium
-#EDITOR=/usr/bin/nano
 
 # st terminal enable delete key
 # tput smkx # works in a terminal but not in a bash rc
